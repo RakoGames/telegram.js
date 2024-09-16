@@ -25,10 +25,10 @@ class ChatMemberManager extends BaseManager {
       .get({
         query: {
           chat_id: this.chatId,
-          user_id: id
+          user_id: id,
         },
       })
-      .then(data => new ChatMember(this.client, chatId, data));
+      .then(data => new ChatMember(this.client, this.chatId, data));
   }
 }
 
